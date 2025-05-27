@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Code Analyzer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div id="header">
+      <h1 id="title">Code Analyzer</h1>
+      <div id="apiKeyMessage">API status will load here...</div>
+    </div>
+
+    <div class="button-group">
+      <button id="getComplexityOnly" class="action-button" disabled>Get Time/Space Complexity (O notation)</button>
+      <button id="explainComplexity" class="action-button" disabled>Explain Time/Space Complexity</button>
+      <button id="getCodeFeedback" class="action-button" disabled>Get Code Quality Feedback</button>
+    </div>
+
+    <div id="resultsContainer">
+      <div id="complexityDirectOutput" class="result-content" style="display: none;">
+        <div class="complexity-item">
+          <span class="complexity-label">Time Complexity:</span>
+          <span id="timeComplexityValue" class="complexity-value time-value-color"></span>
+        </div>
+        <div class="complexity-item">
+          <span class="complexity-label">Space Complexity:</span>
+          <span id="spaceComplexityValue" class="complexity-value space-value-color"></span>
+        </div>
+      </div>
+      <!-- Updated initial message area -->
+      <div id="results" class="result-content">
+        <p>Select code on any webpage, then press Ctrl+C (Windows/Linux) or Cmd+C (Mac) to copy it.</p>
+        <p>Then, click the extension icon and choose an analysis option.</p>
+        <hr class="info-divider">
+        <p class="supported-sites">Works seamlessly on platforms like <strong>LeetCode</strong>, <strong>GeeksforGeeks</b>(GFG), <strong>CodeChef</b>, <strong>Codeforces</strong>, etc.</p>
+      </div>
+    </div>
+
+    <footer id="attribution">
+      Made by Sunam
+    </footer>
+
+    <button id="closeButton" class="close-button">Close</button>
+  </div>
+
+  <script src="marked.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
